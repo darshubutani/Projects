@@ -10,8 +10,8 @@ const btnHold = document.querySelector('.btn--hold');
 let current0El = document.getElementById('current--0');
 let current1El = document.getElementById('current--1');
 let currentScore, activePlayer, scores, play;
-
-const initialize = function () {
+//using arrow function
+const initialize = () => {
   scores = [0, 0];
   currentScore = 0;
   activePlayer = 0;
@@ -26,8 +26,8 @@ const initialize = function () {
   document.querySelector(`.player--0`).classList.remove('player--winner');
   document.querySelector(`.player--1`).classList.remove('player--winner');
 }
-
-const switchPlayer = function () {
+//using arrow function
+const switchPlayer = () => {
   currentScore = 0;
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   activePlayer = activePlayer === 0 ? 1 : 0;
